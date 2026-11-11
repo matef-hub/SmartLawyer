@@ -1,46 +1,42 @@
-# 📱 SmartLawyer
+<div align="center">
+<img src="assets/readme-cover.svg" alt="SmartLawyer native Android legal practice application" width="100%" />
 
-تطبيق أندرويد احترافي مخصص للمحامين يساعد على إدارة القضايا، العملاء، الجلسات، والقرارات القضائية بسهولة وفعالية.
+# SmartLawyer
+**إدارة العمل القانوني على Android**
 
----
+[Developer profile](https://github.com/matef-hub) · [Judicial Agenda](https://github.com/matef-hub/agenda)
+</div>
 
-## ⚙️ الميزات الرئيسية
+## About
 
-- ✅ تسجيل دخول وتسجيل حساب جديد
-- ✅ إدارة بيانات العملاء (إضافة، تعديل، حذف)
-- ✅ إدارة القضايا وربطها بالعملاء
-- ✅ تسجيل القرارات القضائية
-- ✅ دعم كامل للغة العربية (RTL)
-- ✅ واجهة حديثة باستخدام Jetpack Compose
-- ✅ تخزين البيانات محليًا باستخدام Room Database
-- ✅ إمكانية مزامنة البيانات مع Google Drive (قريبًا)
+**SmartLawyer** is a Kotlin and Jetpack Compose project for Egyptian legal workflows on Android. Its modules cover clients, case information, court sessions and practice-oriented navigation with Arabic UI support.
 
----
+The project uses Android architecture components including **Room**, **Hilt** and Compose. This is a development repository: features and end-to-end behavior must be tested on a real device or emulator before being described as ready for client use.
 
-## 🧱 التقنيات المستخدمة
+```mermaid
+flowchart LR
+    A["Arabic UI / Compose"] --> B["ViewModels"]
+    B --> C["Repository / Room"]
+    C --> D["Local legal records"]
+    B --> E["Navigation & forms"]
+```
 
-| التقنية              | الاستخدام                         |
-|----------------------|-----------------------------------|
-| **Kotlin**           | لغة البرمجة الأساسية              |
-| **Jetpack Compose**  | لبناء واجهات المستخدم الحديثة     |
-| **Room Database**    | لحفظ البيانات محليًا              |
-| **Navigation Compose** | للتنقل بين الشاشات             |
-| **Hilt**             | للحقن التلقائي (Dependency Injection) |
-| **DataStore**        | لحفظ الإعدادات والبيانات المؤقتة  |
+## Build
 
----
+Open in Android Studio with a suitable Android SDK and Java 17. From Windows:
 
-## 📷 صور من التطبيق
+```powershell
+.\gradlew.bat :app:assembleDebug
+```
 
-> سيتم إضافة الصور لاحقًا بعد الانتهاء من الواجهات الأساسية.
+### Planned / verification-required
 
----
+- Google Drive backup and restore must be checked end-to-end before being advertised as reliable.
+- Authentication, validation, saved-record persistence and navigation need device testing.
+- The repository currently includes a tracked `mynewkey.keystore`. **Treat this as a potential signing-key exposure**, determine whether it was used for releases, and rotate or migrate signing credentials if necessary.
 
-## 🛠️ طريقة التشغيل
+## Responsible use
 
-1. تأكد من وجود Android Studio (Arctic Fox أو أحدث)
-2. استنسخ المشروع:
+Do not put real client documents, IDs or credentials in issues, screenshots, source control or sample data. This application does not substitute for reviewing official legal material.
 
-```bash
-git clone https://github.com/atefdodo/SmartLawyer.git
-
+**Mohamed Atef** · Lawyer & Legal Tech Developer

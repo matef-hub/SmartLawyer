@@ -12,7 +12,16 @@
 /captures
 .externalNativeBuild
 .cxx
-* text=auto
-*.kt text eol=lf
-*.xml text eol=lf
-*.json text eol=lf
+
+
+
+
+# Never track Android signing credentials
+*.keystore
+*.jks
+*.p12
+*.pem
+*.properties.local
+.env
+.env.*
+!.env.example

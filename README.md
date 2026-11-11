@@ -33,7 +33,7 @@ Open in Android Studio with a suitable Android SDK and Java 17. From Windows:
 
 - Google Drive backup and restore must be checked end-to-end before being advertised as reliable.
 - Authentication, validation, saved-record persistence and navigation need device testing.
-- The repository currently includes a tracked `mynewkey.keystore`. **Treat this as a potential signing-key exposure**, determine whether it was used for releases, and rotate or migrate signing credentials if necessary.
+- A `mynewkey.keystore` file was previously tracked and has been removed from the latest tree, but may remain in historical commits. **Treat this as potential signing-key exposure**. Determine whether it signed releases and follow the appropriate Android/Play key recovery process.
 
 ## Responsible use
 
